@@ -1,0 +1,750 @@
+/* Подключение шрифтов из гугл фонтс */
+/* &display=swap&subset=cyrillic-ext */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap&subset=cyrillic-ext");
+
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P:regular&display=swap&subset=cyrillic-ext");
+
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular);
+
+/* Обнуляем стили */
+/* Обращаемся ко всему с помощью "*" */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/* Эта новая штука, разберись  с ней */
+	box-sizing: border-box;
+}
+/* ТОчки стиля списков */
+li {
+	list-style: none;
+}
+/* Ссылки */
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+/* Заголовки */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+/* Фантомный отступ у картинок */
+img {
+	vertical-align: top;
+}
+body {
+	line-height: 100%;
+	color: rgb(255, 255, 255);
+	padding: 0px;
+	font-family: Montserrat;
+	background-color: yellow;
+}
+
+/* LESSON_09 */
+/* container */
+.header {
+	background-color: rgb(22, 145, 73);
+}
+.container {
+	position: relative;
+	max-width: 80%;
+	margin: 0px auto;
+}
+.headertext {
+	position: sticky;
+	top: 10px;
+	max-width: 380px;
+	margin: 10px auto;
+	padding-top: 5px;
+	font-size: 40px;
+	line-height: 100%;
+	font-weight: 800;
+	z-index: 10000;
+	color: black;
+	text-shadow: 0 0 5px white;
+}
+
+.headertext::before {
+	content: "";
+	vertical-align: center;
+	margin: 0px 5px 0px 0px;
+	background: red;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	display: inline-block;
+	box-shadow: 0 0 15px white;
+}
+.headertext::after {
+	content: "";
+	vertical-align: center;
+	margin: 0px 0px 0px 5px;
+	background: red;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	display: inline-block;
+	box-shadow: 0 0 15px white;
+}
+/* SUBLIST */
+
+.menu {
+}
+.list {
+}
+.link {
+	padding: 10px 0px;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 600;
+	color: white;
+	text-transform: uppercase;
+}
+.list > li:hover .link {
+	color: yellow;
+}
+.list > li {
+	display: inline-block;
+	margin: 0 25px 0 0;
+	position: relative;
+}
+.list > li:hover .sublist {
+	content: "";
+	display: inline-block;
+}
+.list > li:last-child {
+	margin-right: 0px;
+}
+.list li:last-child .sublist {
+	right: 0;
+	left: auto;
+}
+
+.sublist {
+	display: none;
+	position: absolute;
+	left: 0;
+	background-color: red;
+	padding: 10px;
+	z-index: 200;
+	top: 100%;
+	min-width: 120px;
+}
+.sublist li {
+	margin: 0 0 10px 0;
+}
+.sublist li:last-child {
+	margin-bottom: 0px;
+}
+.sublink {
+	color: white;
+}
+/* SUBSUBLIST 3 */
+.subsublist {
+	font-size: 16px;
+}
+.subsublink {
+}
+.list {
+}
+.sublink {
+	padding: 10px 0px;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 600;
+	color: white;
+	text-transform: uppercase;
+}
+.sublist > li:hover .sublink {
+	color: black;
+}
+.subsublist > li:hover .subsublink {
+	color: black;
+}
+.sublist > li {
+	display: inline-block;
+	margin: 0 25px 0 0;
+	position: relative;
+}
+.sublist > li:hover .subsublist {
+	content: "";
+	display: inline-block;
+}
+.sublist > li:last-child {
+	margin-right: 0px;
+}
+.list li:last-child .subsublist {
+	right: 120px;
+	left: auto;
+}
+/* как-то криво этот сдвиг
+} */
+
+.subsublist {
+	display: none;
+	position: absolute;
+	left: 100%;
+	top: 0px;
+	background-color: blue;
+	padding: 10px;
+	z-index: 300;
+
+	min-width: 120px;
+}
+.subsublist li {
+	margin: 0 0 10px 0;
+}
+.subsublist li:last-child {
+	margin-bottom: 0px;
+}
+.subsublink {
+	color: white;
+}
+/* SKY */
+.sky {
+	background: rgb(11, 12, 29);
+	min-width: 800px;
+	min-height: 400px;
+	margin: 0px 0px;
+	position: relative;
+}
+.moon {
+	position: absolute;
+	display: inline-block;
+	top: 70px;
+	right: 70px;
+	width: 100px;
+	height: 100px;
+	background: linear-gradient(to left, yellow, white);
+	border-radius: 50%;
+	box-shadow: 0px 1px 100px 10px yellow;
+}
+.stars {
+	position: relative;
+	/* position: absolute;
+	display: inline-block;
+	top: 00px; 
+	right: 00px; */
+	/* width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255); */
+}
+.star1 {
+	position: absolute;
+	display: inline-block;
+	top: 50px;
+	left: 100px;
+	width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255);
+}
+.star2 {
+	position: absolute;
+	display: inline-block;
+	top: 100px;
+	left: 250px;
+	width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255);
+}
+.star3 {
+	position: absolute;
+	display: inline-block;
+	top: 180px;
+	left: 350px;
+	width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255);
+}
+.star4 {
+	position: absolute;
+	display: inline-block;
+	top: 60px;
+	left: 470px;
+	width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255);
+}
+.star5 {
+	position: absolute;
+	display: inline-block;
+	top: 160px;
+	left: 540px;
+	width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255);
+}
+.star6 {
+	position: absolute;
+	display: inline-block;
+	top: 30px;
+	left: 720px;
+	width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255);
+}
+.star7 {
+	position: absolute;
+	display: inline-block;
+	top: 120px;
+	left: 670px;
+	width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255);
+}
+
+.star8 {
+	position: absolute;
+	display: inline-block;
+	top: 280px;
+	left: 140px;
+	width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255);
+}
+
+.star9 {
+	position: absolute;
+	display: inline-block;
+	top: 100px;
+	left: 840px;
+	width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255);
+}
+.star10 {
+	position: absolute;
+	display: inline-block;
+	top: 220px;
+	left: 940px;
+	width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255);
+}
+.star11 {
+	position: absolute;
+	display: inline-block;
+	top: 320px;
+	left: 1090px;
+	width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255);
+}
+.star12 {
+	position: absolute;
+	display: inline-block;
+	top: 70px;
+	left: 1010px;
+	width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255);
+}
+.star13 {
+	position: absolute;
+	display: inline-block;
+	top: 290px;
+	left: 870px;
+	width: 1px;
+	height: 1px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 1px 20px 10px rgb(255, 255, 255);
+}
+.moon::after {
+	content: "";
+	vertical-align: top;
+	margin: 6px 0px 0px 2px;
+	background: rgb(11, 12, 29);
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	display: inline-block;
+	opacity: 90%;
+	/* box-shadow: inset 0px 0px 20px 2px yellow; */
+}
+/* ROAD */
+.road {
+	position: relative;
+	background: rgb(97, 103, 112);
+
+	min-height: 400px;
+	margin: 0px 0px;
+	position: relative;
+	top: -450px;
+}
+.dash {
+	position: absolute;
+	display: inline-block;
+	top: 150px;
+	width: 1300px;
+	height: 20px;
+
+	border-top: 15px dashed white;
+}
+
+/* ==AUTOBUS== */
+
+.bus {
+	/* border: 5px solid red; */
+
+	min-height: 400px;
+	max-width: 700px;
+	margin: 20px 20px;
+	position: relative;
+	left: 280px;
+	top: -200px;
+	z-index: 100;
+}
+
+/* ROOF */
+.r {
+	position: relative;
+}
+.rw {
+	position: absolute;
+	top: 0px;
+	z-index: 10;
+}
+
+.roofwindows {
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 15px;
+	width: 50px;
+	height: 30px;
+	background: linear-gradient(to top, blue, lightblue);
+	border-radius: 15px;
+	border: 3px solid black;
+	box-shadow: inset 0px 1px 1px 1px white;
+}
+
+.roof {
+	position: relative;
+	margin-top: 0px;
+	width: 500px;
+	height: 50px;
+	background: linear-gradient(to top, yellow, rgb(255, 255, 113));
+	border-radius: 25px 25px 0px 0px;
+	box-shadow: -3px 0px 3px 0px black;
+}
+
+/* MIDDLE */
+
+.m {
+	position: relative;
+}
+.mid {
+	position: relative;
+	margin-top: 0px;
+	width: 520px;
+	height: 110px;
+	background-color: yellow;
+	border-bottom: 10px solid black;
+	box-shadow: -3px 0px 0px 0px black;
+}
+
+/* window section */
+.window {
+	position: relative;
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 5px;
+	width: 70px;
+	height: 80px;
+	background: linear-gradient(to top, blue, lightblue);
+	border: 3px solid black;
+	box-shadow: inset 0px 1px 1px 1px white;
+	border-radius: 5px;
+}
+.bw {
+	position: absolute;
+	left: 5px;
+	z-index: 3;
+}
+.bw::after {
+	position: absolute;
+	content: "";
+	left: 495px;
+	width: 0;
+	height: 0;
+	border-top: 100px solid rgb(11, 12, 29);
+	border-left: 20px solid transparent;
+}
+.bw div:last-child {
+	margin-left: 108px;
+	width: 90px;
+	background: url(../img/ZHEKA01.png), linear-gradient(to top, blue, lightblue);
+}
+/* door section */
+.door {
+	position: absolute;
+	z-index: 20;
+	display: inline-block;
+	margin-top: -100px;
+	margin-left: 329px;
+	width: 90px;
+	height: 200px;
+	background: yellow;
+	border: 3px solid black;
+	box-shadow: 0px 1px 1px 1px rgb(68, 66, 66);
+	border-radius: 5px;
+}
+/* как-то тупо приделал дверную щель, подумай как переделать */
+.doorwindow {
+	position: absolute;
+	display: inline-block;
+	top: -3px;
+	left: -4px;
+	width: 45px;
+	height: 200px;
+	background: transparent;
+	border: 1px solid black;
+	box-shadow: 0px 1px 1px 1px rgb(68, 66, 66);
+	border-radius: 5px 0 0 5px;
+}
+.doortopwindow {
+	display: inline-block;
+	margin-top: 7px;
+	margin-left: 6px;
+	width: 30px;
+	height: 80px;
+	background: linear-gradient(to top, blue, lightblue);
+	border-radius: 10px;
+	border: 3px solid black;
+	box-shadow: inset 0px 1px 1px 1px white;
+}
+.doorbottomwindow {
+	display: inline-block;
+	margin-top: 7px;
+	margin-left: 6px;
+	width: 30px;
+	height: 90px;
+	background: linear-gradient(to top, blue, lightblue);
+	border-radius: 10px;
+	border: 3px solid black;
+	box-shadow: inset 0px 1px 1px 1px white;
+}
+
+/* нижняя часть */
+.b {
+	position: relative;
+}
+.text {
+	position: absolute;
+	top: 30px;
+	left: 45px;
+	font-family: "Bebas Neue";
+	font-size: 60px;
+	color: black;
+	word-spacing: 20px;
+}
+.span {
+	padding-left: 130px;
+}
+.hood {
+	position: absolute;
+	z-index: 20;
+	display: inline-block;
+	top: -10px;
+	left: 520px;
+	width: 130px;
+	height: 20px;
+	background: yellow;
+	border: 1px solid black;
+	box-shadow: 0px 1px 1px 1px rgb(68, 66, 66);
+	border-radius: 0 30px 0 30px;
+}
+.h {
+	position: absolute;
+	top: 10px;
+	left: 550px;
+	max-width: 40px;
+}
+.hoody {
+	display: inline-block;
+	width: 30px;
+	height: 5px;
+	background: yellow;
+	border: 1px solid black;
+	box-shadow: 0px 1px 1px 1px rgb(68, 66, 66);
+	border-radius: 0 30px 0 30px;
+}
+.bott {
+	position: relative;
+	width: 650px;
+	height: 140px;
+	background: linear-gradient(to top, orange, yellow);
+	border-radius: 0 10px 0 0;
+	box-shadow: -3px 0px 3px 0px black;
+}
+.line {
+	position: absolute;
+	top: 70px;
+	width: 650px;
+	height: 10px;
+	background: black;
+}
+.bu {
+	position: relative;
+}
+.bumper {
+	position: absolute;
+	bottom: 5px;
+	left: -10px;
+	width: 30px;
+	height: 50px;
+	background: black;
+	border-radius: 5px;
+}
+.bumper::before {
+	content: "";
+	margin: 5px 0px 0px -5px;
+	display: inline-block;
+	width: 40px;
+	height: 10px;
+	border-radius: 5px;
+	background: linear-gradient(to top, rgb(82, 82, 107), rgb(152, 165, 170));
+}
+.bumper::after {
+	content: "";
+	margin: 15px 0px 0px -5px;
+	display: inline-block;
+	width: 40px;
+	height: 10px;
+	border-radius: 5px;
+	background: linear-gradient(to top, rgb(82, 82, 107), rgb(152, 165, 170));
+}
+.bu div:last-of-type {
+	margin-left: 640px;
+}
+.blight {
+	position: absolute;
+	top: 10px;
+	left: -10px;
+	width: 30px;
+	height: 50px;
+	background: linear-gradient(to top, rgb(255, 0, 0), rgb(255, 166, 0));
+	box-shadow: -5px 0px 21px 5px rgb(255, 166, 0);
+	border-radius: 5px;
+}
+.flight {
+	position: absolute;
+	top: 5px;
+	left: 600px;
+	width: 30px;
+	height: 50px;
+	background: black;
+	border-radius: 30px 0 0 30px;
+	z-index: 50;
+}
+.flight::after {
+	content: "";
+	margin: 0px 0px 0px 30px;
+	display: inline-block;
+	width: 15px;
+	height: 50px;
+	border-radius: 0 15px 15px 0;
+	background: linear-gradient(to top, rgb(255, 255, 255), rgb(0, 183, 255));
+	box-shadow: 10px 0px 20px 5px rgb(255, 255, 255);
+}
+.stairs {
+	position: absolute;
+	bottom: 5px;
+	left: 329px;
+	width: 90px;
+	height: 30px;
+	background: yellow;
+	border: 3px solid black;
+	box-shadow: 0px 1px 1px 1px rgb(68, 66, 66);
+	border-radius: 5px;
+}
+
+/* колёса */
+.w {
+	position: relative;
+	left: 100px;
+	top: -50px;
+}
+.ww {
+	position: absolute;
+}
+.wing {
+	position: absolute;
+	background: #000;
+	width: 150px;
+	height: 75px;
+	border-radius: 65px 65px 0 0;
+}
+.wheel {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	width: 120px;
+	height: 120px;
+	background-color: rgb(25, 25, 37);
+	border-radius: 50%;
+	border: 8px dashed rgb(20, 19, 20);
+}
+.wheel::before {
+	content: "";
+	margin: 22px 0px 0px 22px;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: yellow;
+	border: 8px dotted black;
+}
+.wheel::after {
+	content: "";
+	position: absolute;
+	top: 37px;
+	left: 37px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: black;
+	border: 4px double white;
+}
+
+.ww ~ div {
+	margin-left: 340px;
+}
